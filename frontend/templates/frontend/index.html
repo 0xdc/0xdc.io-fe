@@ -36,9 +36,8 @@
         <p>
             i am a linux systems administrator and programmer, interested in
             <span>open source software and culture</span>,
-            <span>the distributed web</span>,
             <span>decentralised infrastructure</span> and
-            <span>secure and communications</span>.
+            <span>secure communications</span>.
         </p>
         <p>
             i like taking pictures of natural scenery and urban landscapes.
@@ -71,13 +70,13 @@
         </span>
     </div>
 
-    {% if user.is_staff %}
     <div class="row">
         <footer>
-            <a href="/admin/">/admin</a>
+	    {% if user.is_staff %}
+		    <a href="/admin/">/admin</a>
+	    {% endif %}
         </footer>
     </div>
-    {% endif %}
   </div>
 
 <!-- End Document
