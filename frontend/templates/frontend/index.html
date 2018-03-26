@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>0xdc.io</title>
+  <meta name="description" content="Homepage">
+  <meta name="author" content="0xdc">
+
+  <!--
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'skeleton-2.0.4/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'skeleton-2.0.4/css/skeleton.css'  %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <header class="u-full-width">
+            <h2>0xdc.io</h2>
+        </header>
+    </div>
+
+    <div class="row">
+      <div class="seven columns">
+        <!-- i have an aversion to the upper case -->
+        <h4>nice to meet you.</h4>
+        <p>
+            i am a linux systems administrator and programmer, interested in
+            <span>open source software and culture</span>,
+            <span>the distributed web</span>,
+            <span>decentralised infrastructure</span> and
+            <span>secure and communications</span>.
+        </p>
+        <p>
+            i like taking pictures of natural scenery and urban landscapes.
+            i love following motorsports too.
+        </p>
+      </div>
+
+      <div class="five columns">
+        <h4 title="keep in touch, best friend forever">k.i.t., b.f.f.</h4>
+        <div id="hcard-0xdc" class="vcard">
+            <a class="email" href="mailto:contact@0xdc.io">contact@0xdc.io</a>
+        </div>
+        <div class="cloud">
+            <a class="url" rel="me" target="_blank" title="a.k.a. the fediverse"
+                href="https://geeks.one/@0xdc">mastodon</a>
+            <a class="url" rel="me" target="_blank" title="self-hosted"
+                href="https://xxoo.ws/0xdc">gitlab</a>
+            <a class="url" rel="me" target="_blank"
+                href="https://github.com/0xdc">github</a>
+            <!-- <a class="url" rel="me" target="_blank" href=""></a> -->
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row fpr">
+        <h7>pgp/gpg fingerprint</h7>
+        <span title="pgp/gpg fingerprint" class="fingerprint">
+            215B&nbsp;1B4B&nbsp;42E5&nbsp;711D&nbsp;AF67&nbsp;
+            8C64      3304&nbsp;289B      C778&nbsp;6857
+        </span>
+    </div>
+
+    {% if user.is_staff %}
+    <div class="row">
+        <footer>
+            <a href="/admin">/admin</a>
+        </footer>
+    </div>
+    {% endif %}
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
