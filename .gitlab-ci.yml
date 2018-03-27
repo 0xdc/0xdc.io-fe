@@ -1,0 +1,8 @@
+image: python:3.5-alpine
+
+before_script:
+- pip install django
+
+test:
+  script:
+  - ./manage.py test
