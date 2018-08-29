@@ -21,7 +21,7 @@ settings.configure(
     INSTALLED_APPS=(
         'django.contrib.contenttypes',
         'django.contrib.auth',
-        'frontend',
+        'frontend.apps.FrontendConfig',
     ),
     TEMPLATES=[
         {
