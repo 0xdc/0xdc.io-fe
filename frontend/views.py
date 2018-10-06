@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.views.generic.base import TemplateView
 
-def homepage(request):
-    return render(request, "frontend/index.html")
+class HomepageView(TemplateView):
+    template_name = "frontend/index.html"
+
+homepage = HomepageView.as_view()
