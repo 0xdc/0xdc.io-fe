@@ -9,7 +9,7 @@ class HomepageTests(TestCase):
     # setUp before every test
     def setUp(self):
         self.factory = RequestFactory()
-        self.request = self.factory.get(reverse("index"))
+        self.request = self.factory.get(reverse("frontend:index"))
 
     def test_homepage(self):
         response = homepage(self.request)

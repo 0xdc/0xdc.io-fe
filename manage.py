@@ -40,8 +40,7 @@ settings.configure(
 )
 #endsnippet
 
-if os.path.exists(os.path.join(BASE_DIR, "frontend", "urls.py")):
-    settings.ROOT_URLCONF='frontend.urls'
+settings.ROOT_URLCONF='urls'
 
 if args.action == "test":
     # 'test' action requires the default database configured
