@@ -14,6 +14,8 @@ class HomepageTests(TestCase):
     def test_homepage(self):
         response = homepage(self.request)
         self.assertNotContains(response, "/admin")
+        # Just for this test, ensure the view uses the correct template
+        self.assertIn("frontend/index.html", response.template_name)
 
     def test_homepage_as_admin(self):
         admin = User.objects.create_superuser('admin', 'admin@example.com', 'adminpassword')
