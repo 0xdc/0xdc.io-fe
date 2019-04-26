@@ -1,6 +1,6 @@
 "use strict";
 
-document.addElementSelector("DOMContentLoaded", function(e){
+document.addEventListener("DOMContentLoaded", function(e){
 	var generated_address = "website." + (Math.random() * 10 ** 16).toString(16) + "@" + window.location.host;
 	var a = document.createElement("a");
 	a.href = "mailto:" + generated_address;
