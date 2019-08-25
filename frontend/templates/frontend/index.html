@@ -1,28 +1,10 @@
+{% extends "frontend/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>0xdc.io</title>
-  <meta name="description" content="Homepage">
-  <meta name="author" content="0xdc">
-
-  <!--
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <link rel="stylesheet" href="{% static 'frontend/skeleton-2.0.4/css/normalize.css' %}">
-  <link rel="stylesheet" href="{% static 'frontend/skeleton-2.0.4/css/skeleton.css'  %}">
-  <link rel="stylesheet" href="{% static 'frontend/css/custom.css' %}">
-
-</head>
-<body>
-  <div class="container">
+  {% block addnlcss %}
+    <link rel="stylesheet" href="{% static 'frontend/css/custom.css' %}">
+  {% endblock %}
+{% block content %}
+<div class="container">
     <div class="row">
         <header class="u-full-width">
             <h2>0xdc.io</h2>
@@ -77,9 +59,5 @@
         </footer>
     </div>
   </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="{% static 'frontend/js/fp-email.js' %}"></script>
-</body>
-</html>
+{% endblock %}

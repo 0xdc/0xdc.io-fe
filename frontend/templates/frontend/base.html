@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+  <title>0xdc.io</title>
+  <meta name="description" content="Homepage">
+  <meta name="author" content="0xdc">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{% static 'frontend/skeleton-2.0.4/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'frontend/skeleton-2.0.4/css/skeleton.css'  %}">
+  {% block addnlcss %}
+  {% endblock %}
+</head>
+<body>
+{% block content %}
+{% endblock %}
+</body>
+</html>
